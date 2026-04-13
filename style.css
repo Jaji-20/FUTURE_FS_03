@@ -1,0 +1,283 @@
+/* ================= GLOBAL ================= */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0b0b0b;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================= HEADER ================= */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #111;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #d4af37;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* ================= HERO (FULLY SAFE - NO EFFECTS) ================= */
+
+.hero {
+  background: url('images/hero.jpg') center center / cover no-repeat;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+/* ❌ COMPLETELY REMOVED ALL HERO HOVER EFFECTS */
+
+/* overlay */
+.overlay {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+/* heading */
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* tagline */
+.tagline {
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  background: linear-gradient(90deg, #d4af37, #fff2a8, #d4af37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 10px rgba(212,175,55,0.5);
+  transition: 0.3s;
+}
+
+.tagline:hover {
+  transform: scale(1.05);
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+  padding: 60px;
+  text-align: center;
+}
+
+/* ❌ REMOVED section:hover to avoid affecting hero */
+
+/* ================= GALLERY ================= */
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #d4af37;
+}
+
+/* ================= FORM ================= */
+
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  color: #d4af37;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #222;
+  color: white;
+}
+
+/* button */
+.submit-btn {
+  width: 100%;
+  background: #d4af37;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px gold;
+}
+
+/* whatsapp */
+.whatsapp-btn {
+  display: block;
+  margin-top: 15px;
+  color: #25D366;
+}
+
+/* ================= ADMIN ================= */
+
+.admin-box {
+  max-width: 500px;
+  margin: auto;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.admin-features {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+/* ================= GLOBAL BUTTON ================= */
+
+button {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* ================= POPUP ================= */
+
+/* ================= POPUP (PROFESSIONAL DARK) ================= */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75); /* dark overlay */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+  z-index: 9999;
+}
+
+.popup.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* popup box */
+.popup-box {
+  background: #111; /* solid dark */
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+
+  transform: scale(0.8);
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+/* animation when open */
+.popup.show .popup-box {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* popup text */
+.popup-box h3 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.popup-box p {
+  color: #ccc;
+}
+
+/* close button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ================= TAGLINE (DARK GOLD FIX) ================= */
+
+.tagline {
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  /* GOLDEN YELLOW GRADIENT */
+  background: linear-gradient(90deg, #FFD700, #FFC300, #FFD700);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+
+  transition: 0.3s;
+}
+
+/* hover glow */
+.tagline:hover {
+  transform: scale(1.05);
+  text-shadow:
+    0 0 10px #FFD700,
+    0 0 20px #FFC300,
+    0 0 30px #FFD700;
+}

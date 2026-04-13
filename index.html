@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow Studio Salon</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<!-- BOOKING SUCCESS POPUP -->
+<!-- POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <span class="close-btn" onclick="closePopup()">✖</span>
+    <h3>Booking Confirmed</h3>
+    <p id="popupMessage"></p>
+  </div>
+</div>
+<body>
+
+<header>
+  <h1>Glow Studio ✨</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+    <a href="#admin-info">Admin</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="overlay">
+    <!-- ❌ REMOVED AOS HERE (IMPORTANT FIX) -->
+    <h2>Luxury Beauty Experience</h2>
+
+    <!-- highlighted tagline -->
+    <p class="tagline">Glow like never before</p>
+
+    <a href="#contact">
+      <button>Book Appointment</button>
+    </a>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h2 data-aos="fade-up">Our Work</h2>
+
+  <div class="gallery">
+    <img src="images/haircut.jpg" data-aos="zoom-in">
+    <img src="images/facial.jpg" data-aos="zoom-in">
+    <img src="images/spa.jpg" data-aos="zoom-in">
+    <img src="images/makeup.jpg" data-aos="zoom-in">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 data-aos="fade-up">Book Appointment</h2>
+
+  <div class="form-container" data-aos="zoom-in">
+    <form id="contactForm">
+
+      <div class="input-group">
+        <label>Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+
+      <div class="input-group">
+        <label>Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter 10-digit number" required pattern="[0-9]{10}">
+      </div>
+
+      <div class="input-group">
+        <label>Select Service</label>
+        <select id="serviceSelect" required>
+          <option value="">Choose a service</option>
+          <option>Haircut</option>
+          <option>Facial</option>
+          <option>Spa</option>
+          <option>Bridal Makeup</option>
+        </select>
+      </div>
+
+      <button class="submit-btn">Book Now</button>
+    </form>
+
+    <a class="whatsapp-btn" href="https://wa.me/919876543210" target="_blank">
+      💬 Chat on WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ADMIN SECTION -->
+<section id="admin-info">
+  <h2 data-aos="fade-up">Admin Dashboard</h2>
+
+  <div class="admin-box" data-aos="fade-up">
+    <p>Manage all bookings easily</p>
+
+    <div class="admin-features">
+      <div>📊 View</div>
+      <div>✏️ Update</div>
+      <div>🗑️ Delete</div>
+    </div>
+
+    <button onclick="openAdmin()">Open Dashboard</button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Glow Studio Salon</p>
+</footer>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000
+  });
+
+  function openAdmin() {
+    window.location.href = "admin.html";
+  }
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
